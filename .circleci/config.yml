@@ -23,3 +23,13 @@ jobs:
           name: Send results to Codecov
           shell: /bin/bash
           command: bash <(curl -s https://codecov.io/bash)
+      - deploy:
+          name: goreleaser
+          command: |
+            if [[ -n ${CIRCLE_TAG} ]]; then
+              curl -sL https://git.io/goreleaser | bash
+            fi
+
+deployment:
+  trigger_tag:
+    tag: /.*/
