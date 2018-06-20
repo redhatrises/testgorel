@@ -28,9 +28,14 @@ builds:
     goarch:
       - amd64
       - arm64
-    format_overrides:
-      - goos: windows
-        format: zip
+
+archive:
+  files:
+    - LICENSE.md
+    - README.md
+  format_overrides:
+    - goos: windows
+      format: zip
 
 
 nfpm:
