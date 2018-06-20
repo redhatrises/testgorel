@@ -27,6 +27,7 @@ jobs:
           name: goreleaser
           command: |
             if [[ -n ${CIRCLE_TAG} ]]; then
+              echo "TAG: ${CIRCLE_TAG}"
               curl -sL https://git.io/goreleaser | bash
             fi
 
