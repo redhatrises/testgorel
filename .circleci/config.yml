@@ -7,7 +7,7 @@ jobs:
     steps:
       - run:
           name: Install Git
-          command: apk add --no-cache bash gcc git musl-dev curl
+          command: apk add --no-cache bash gcc git musl-dev curl rpm-build
       - checkout
 
       - run:
