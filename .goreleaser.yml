@@ -11,6 +11,10 @@ builds:
     goarch:
       - amd64
       - arm64
+    format_overrides:
+      - goos: windows
+        format: zip
+
 
   - binary: compliance-masonry
     main: ./cmd/compliance-masonry/compliance-masonry.go
@@ -24,6 +28,10 @@ builds:
     goarch:
       - amd64
       - arm64
+    format_overrides:
+      - goos: windows
+        format: zip
+
 
 nfpm:
   homepage: https://github.com/opencontrol/compliance-masonry
